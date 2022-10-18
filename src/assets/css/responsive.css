@@ -1,0 +1,110 @@
+@media screen and (max-width: 1440px) {
+}
+@media screen and (max-width: 992px) {
+  .blogsCarousel .blog .height img {
+    width: 250px;
+  }
+  .blogsCarousel .blog .height {
+    min-height: 255px;
+  }
+  nav.active {
+    background: var(--secondary);
+  }
+  .navlinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    background: var(--secondary);
+  }
+  .navlinks.active {
+    height: 211px;
+    border-bottom: 1px solid var(--primary);
+  }
+  .navlinks li {
+    margin-bottom: 10px;
+  }
+  .navlinks li a {
+    font-size: 1.25rem;
+  }
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+  .chooseCard {
+    min-height: 385px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactContainer .rightSection,
+  .contactContainer .leftSection {
+    min-height: auto;
+  }
+  .projectCard .height {
+    min-height: auto;
+  }
+  .enquireNow .container {
+    width: 90%;
+  }
+  .call,
+  .scrollToTop {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+  .enquireNow img {
+    aspect-ratio: 0.8;
+  }
+}
+@media screen and (max-width: 767px) {
+  .enquireNow .container img {
+    aspect-ratio: unset;
+  }
+  .chooseCard {
+    min-height: auto;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .blogsCarousel .blog .height img {
+    width: 200px;
+  }
+  .blogsCarousel .blog .height {
+    min-height: auto;
+  }
+  .blogsCarousel .blog {
+    margin-right: 20px;
+  }
+  .aboutBanner img {
+    width: 75px;
+  }
+  .aboutBanner .row > div:last-child {
+    margin-top: 20px;
+  }
+  .banner .intro {
+    top: 30%;
+  }
+  .enquireNowBtn {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* height */
+@media screen and (max-height: 576px) {
+  .aboutBanner {
+    min-height: auto;
+  }
+}

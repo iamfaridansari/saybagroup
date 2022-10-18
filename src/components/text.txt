@@ -1,0 +1,32 @@
+cpanel
+https://saybagroup.com/cpanel
+
+username
+saybagroup
+
+password
+sbg@123#gst
+
+backend
+https://saybagroup.com/backend
+
+enquire
+https://saybagroup.com/backend/api/enquiry
+{
+"name":"aa",
+"email":"aaWyahoo.dom",
+"mobile":"1234567890"
+}
+
+contact us
+https://saybagroup.com/backend/api/contactus
+{
+    "name":"tt",
+    "email":"aa@yahoo,com",
+    "mobile":"1234567890",
+    "subject":"test",
+    "message":"hello"
+}
+
+newsletter
+https://saybagroup.com/backend/api/newsletter
