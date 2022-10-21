@@ -40,7 +40,7 @@ const ViewBlog = () => {
               src={`https://saybagroup.com/backend/public/img/blog_images/${blog.photo}`}
               className="myRadius"
               style={{ aspectRatio: 1.8 }}
-              alt=""
+              alt="image"
             />
           </div>
         </div>

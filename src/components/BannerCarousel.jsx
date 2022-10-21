@@ -9,20 +9,12 @@ const BannerCarousel = () => {
   const { modalActive } = useContext(myContext);
 
   const firstHead = useRef(null);
-  const secondHead = useRef(null);
 
   useEffect(() => {
     const first = firstHead.current;
-    const second = secondHead.current;
 
     if (!modalActive) {
       gsap.from(first, {
-        letterSpacing: "5px",
-        opacity: 0,
-        duration: 1,
-        ease: "Back.easeOut",
-      });
-      gsap.from(second, {
         letterSpacing: "5px",
         opacity: 0,
         duration: 1,
@@ -57,13 +49,13 @@ const BannerCarousel = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={img4} className="d-block w-100" alt="" />
+            <img src={img4} className="d-block w-100" alt="image" />
           </div>
           <div className="carousel-item">
-            <img src={img12} className="d-block w-100" alt="" />
+            <img src={img12} className="d-block w-100" alt="image" />
           </div>
           <div className="carousel-item">
-            <img src={img9} className="d-block w-100" alt="" />
+            <img src={img9} className="d-block w-100" alt="image" />
           </div>
         </div>
         <button
@@ -94,9 +86,8 @@ const BannerCarousel = () => {
 
       <div className="intro">
         <h1 className="mb-sm-2 mb-3" ref={firstHead}>
-          Live a luxurious life
-        </h1>
-        <h1 ref={secondHead}>Book your dream home with us</h1>
+          Live a luxurious life <br />
+          Book your dream home with us</h1>
       </div>
     </section>
   );

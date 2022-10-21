@@ -11,7 +11,7 @@ const ProjectCard = ({ img, classname, title, id }) => {
       className={"myCard shadow " + classname}
       onClick={scrolltotop}
     >
-      <img src={`https://saybagroup.com/backend/public/img/project_images/${img}`} alt="" />
+      <img src={`https://saybagroup.com/backend/public/img/project_images/${img}`} alt="image" />
       <div className="content text-center">
         <p className="text-white title">{title}</p>
       </div>

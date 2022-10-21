@@ -43,7 +43,7 @@ const ViewProject = () => {
       <div className="detailSection">
         <div className="row align-items-center justify-content-start">
           <div className="col-md-6">
-            <img src={`https://saybagroup.com/backend/public/img/project_images/${details.photo}`} className="rounded" alt="" />
+            <img src={`https://saybagroup.com/backend/public/img/project_images/${details.photo}`} className="rounded" alt="image" />
           </div>
         </div>
       </div>

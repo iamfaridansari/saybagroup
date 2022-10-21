@@ -28,10 +28,10 @@ const TestimonialCarousel = () => {
               key={index}
             >
               <div className="profilepic text-center">
-                <img src={`https://saybagroup.com/backend/public/img/testimonial_images/${item.photo}`} alt="" />
+                <img src={`https://saybagroup.com/backend/public/img/testimonial_images/${item.photo}`} alt="image" />
               </div>
               <p>{item.description}</p>
-              <p className="title fw-bold">{item.name}</p>
+              <h3 className="fw-bold">{item.name}</h3>
             </div>
           );
         })}

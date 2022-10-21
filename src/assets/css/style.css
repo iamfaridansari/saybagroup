@@ -68,6 +68,14 @@ h1 {
   font-size: 2rem;
   font-family: "Playfair display";
 }
+h2 {
+  font-size: 1.5rem;
+  font-family: "Playfair display";
+}
+h3 {
+  font-size: 1.1rem;
+  font-family: "Nunito";
+}
 p,
 li,
 button,
@@ -78,9 +86,6 @@ a {
 }
 a:hover {
   color: unset;
-}
-.title {
-  font-size: 1.25rem;
 }
 .myRadius {
   border-radius: 5px;

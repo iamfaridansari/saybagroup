@@ -184,9 +184,9 @@ const Home = () => {
       <BannerCarousel />
 
       <div className="container text-center py-5">
-        <h1 className="mb-2 text-capitalize" ref={taglineRef}>
+        <h2 className="mb-2 text-capitalize" ref={taglineRef}>
           We rise by lifting others
-        </h1>
+        </h2>
         <p>
           We believe that we always grow when we help others grow. Our vision is
           to sprawl across the region, uniting hands to our team to strengthen
@@ -195,9 +195,9 @@ const Home = () => {
       </div>
 
       <section className="container py-5">
-        <h1 className="text-uppercase text-center" ref={projectHeadRef}>
+        <h2 className="text-uppercase text-center" ref={projectHeadRef}>
           our projects
-        </h1>
+        </h2>
         {
           propertyLoad ? <Loading content="properties" /> :
 
@@ -230,9 +230,9 @@ const Home = () => {
 
       <section className="container py-5">
         <div className="intro text-center">
-          <h1 className="text-uppercase" ref={chooseHeadRef}>
+          <h2 className="text-uppercase" ref={chooseHeadRef}>
             Why choose us
-          </h1>
+          </h2>
         </div>
 
         <div className="row align-items-start justify-content-between mt-3 gap-md-4 gap-2 px-sm-0 px-2">
@@ -250,16 +250,16 @@ const Home = () => {
       </section>
 
       <section className="container py-5 testimonialContainer">
-        <h1 className="text-center text-uppercase mb-3" ref={testHeadRef}>
+        <h2 className="text-center text-uppercase mb-3" ref={testHeadRef}>
           Testimonial
-        </h1>
+        </h2>
         <TestimonialCarousel />
       </section>
 
       <section className="container my-5">
-        <h1 className="text-uppercase text-center" ref={blogHeadRef}>
+        <h2 className="text-uppercase text-center" ref={blogHeadRef}>
           Blogs
-        </h1>
+        </h2>
         {
           blogLoad ? <Loading content="blogs" /> :
             <div className="mt-3 mb-4 cardContainer" ref={blogCardRef}>

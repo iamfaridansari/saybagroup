@@ -148,7 +148,7 @@ const AboutUs = () => {
         <div className="container p-0 overflow-hidden">
           <div className="row m-0 align-items-start justify-content-between missionContainer">
             <div className="col-sm-6 text-start" ref={missionLeftRef}>
-              <h1 className="text-uppercase  mb-sm-3 mb-2">Mission</h1>
+              <h2 className="text-uppercase  mb-sm-3 mb-2">Mission</h2>
               <p className="mb-sm-0 mb-2">
                 Since inception, we have been working hard towards delivering
                 dreams to our customers with their complete satisfaction. It is
@@ -157,7 +157,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="col-lg-5 col-sm-6" ref={missionRightRef}>
-              <img src={img5} className="myRadius shadow" alt="" />
+              <img src={img5} className="myRadius shadow" alt="image" />
             </div>
           </div>
         </div>
@@ -165,9 +165,9 @@ const AboutUs = () => {
         <div className="container p-0 overflow-hidden">
           <div className="row m-0 align-items-start justify-content-between mt-5 visionContainer">
             <div className="col-sm-6 order-sm-2" ref={visionRightRef}>
-              <h1 className="text-uppercase  mb-sm-3 mb-2 text-md-end">
+              <h2 className="text-uppercase  mb-sm-3 mb-2 text-md-end">
                 Vision
-              </h1>
+              </h2>
               <p className="text-md-end mb-sm-0 mb-2">
                 We believe that we always grow when we help others grow. Our
                 vision is to sprawl across the region, uniting hands to our team
@@ -175,7 +175,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="col-lg-5 col-sm-6 order-sm-1" ref={visionLefttRef}>
-              <img src={img6} className="myRadius shadow landscape" alt="" />
+              <img src={img6} className="myRadius shadow landscape" alt="image" />
             </div>
           </div>
         </div>

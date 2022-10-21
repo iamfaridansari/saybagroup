@@ -52,7 +52,7 @@ const Amenities = () => {
               className={index === imageIndex ? "sslide activeSlide" : "sslide"}
               key={index}
             >
-              <img src={image} alt="" />
+              <img src={image} alt="image" />
             </div>
           );
         })}

@@ -75,7 +75,7 @@ const EnquireNow = () => {
         </div>
         <div className="row align-items-start justify-content-between gap-sm-5 gap-4">
           <div className="col-md">
-            <img src={building1} alt="" />
+            <img src={building1} alt="image" />
           </div>
           <div className="col-md">
             <p className="title primaryText">

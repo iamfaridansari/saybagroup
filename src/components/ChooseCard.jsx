@@ -24,10 +24,10 @@ const ChooseCard = ({ title, body, img }) => {
   return (
     <div className="col-md text-center p-3 chooseCard" ref={chooseRef}>
       <div className="imgDiv">
-        <img src={img} alt="" />
+        <img src={img} alt="image" />
       </div>
       <div>
-        <p className="title fw-bold text-capitalize mb-2">{title}</p>
+        <h3 className="fw-bold text-capitalize mb-2">{title}</h3>
         <p>{body}</p>
       </div>
     </div>

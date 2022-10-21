@@ -25,9 +25,9 @@ const AboutComponent = ({ img, title, subtitle }) => {
   }, []);
   return (
     <div className="col-sm col-6" ref={addAbout}>
-      <img src={img} alt="" />
-      <p className="title text-white">{title}</p>
-      <p className="text-white text-uppercase">{subtitle}</p>
+      <img src={img} alt="image" />
+      <h3 className="title text-white">{title}</h3>
+      <h3 className="text-white text-uppercase">{subtitle}</h3>
     </div>
   );
 };

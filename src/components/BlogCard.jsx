@@ -11,7 +11,7 @@ const BlogCard = ({ id, img, name }) => {
       className="myCard shadow"
       onClick={scrolltotop}
     >
-      <img src={`https://saybagroup.com/backend/public/img/blog_images/${img}`} alt="" />
+      <img src={`https://saybagroup.com/backend/public/img/blog_images/${img}`} alt="image" />
       <div className="content text-center">
         <p className="text-white">{name}</p>
       </div>
