@@ -1,4 +1,4 @@
-import React, { createContext, useState, useRef, useEffect } from "react";
+import React, { createContext, useState, useRef } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "./assets/css/style.css";
@@ -60,8 +60,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <EnquireNow />
-      <EnquireNowBtn />
+      {/* <EnquireNow /> */}
+      {/* <EnquireNowBtn /> */}
       <Helpers />
       <Footer />
     </myContext.Provider>

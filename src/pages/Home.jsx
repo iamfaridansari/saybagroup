@@ -172,11 +172,11 @@ const Home = () => {
     fetchProperties()
     getBlogs()
     // 
-    if (firstLoad) {
-      setTimeout(() => {
-        setModalActive(true)
-      }, [3000])
-    }
+    // if (firstLoad) {
+    //   setTimeout(() => {
+    //     setModalActive(true)
+    //   }, [3000])
+    // }
   }, [])
   // 
   return (
