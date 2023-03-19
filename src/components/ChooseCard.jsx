@@ -10,8 +10,7 @@ const ChooseCard = ({ title, body, img }) => {
 
     gsap.from(choose, {
       y: "50px",
-      duration: 2,
-      ease: "Back.easeOut",
+      duration: 1,
       scrollTrigger: {
         trigger: choose,
         start: "top 90%",

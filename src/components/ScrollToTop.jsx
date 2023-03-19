@@ -7,7 +7,7 @@ const ScrollToTop = () => {
   };
 
   return (
-    <div className="myBtn scrollToTop shadow" onClick={scrollToTop}>
+    <div className="button scrollToTop shadow" onClick={scrollToTop}>
       <AiOutlineArrowUp />
     </div>
   );

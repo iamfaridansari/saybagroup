@@ -13,12 +13,12 @@ const Contact = () => {
     gsap.from(left, {
       translateX: "-100%",
       duration: 1,
-      ease: "Back.easeOut"
+      ease: "Back.easeOut",
     });
     gsap.from(right, {
       translateX: "100%",
       duration: 1,
-      ease: "Back.easeOut"
+      ease: "Back.easeOut",
     });
   }, []);
 
@@ -43,66 +43,6 @@ const Contact = () => {
       ...details,
       [name]: value,
     });
-  };
-
-  const submitForm = async (e) => {
-    e.preventDefault();
-
-    if (!details.name) {
-      setError({
-        name: "Enter your name",
-      });
-    } else if (!details.email) {
-      setError({
-        email: "Enter your email address",
-      });
-    } else if (!details.mobile) {
-      setError({
-        mobile: "Enter your 10 digit mobile number",
-      });
-    } else if (!details.message) {
-      setError({
-        message: "Enter your message",
-      });
-    } else if (details.mobile.length !== 10) {
-      setError({
-        mobile: "Enter your 10 digit mobile number",
-      });
-    } else {
-      try {
-        const url = `https://saybagroup.com/backend/api/contactus`;
-
-        let response = await fetch(url, {
-          method: "POST",
-          body: JSON.stringify({
-            name: details.name,
-            email: details.email,
-            mobile: details.mobile,
-            subject: details.subject,
-            message: details.message,
-          }),
-        });
-        let data = await response.json();
-        console.log(data);
-        setSuccess("Your message has been submitted!");
-        setDetails({
-          name: "",
-          email: "",
-          mobile: "",
-          subject: "",
-          message: "",
-        });
-        setError({
-          name: "",
-          email: "",
-          mobile: "",
-          subject: "",
-          message: "",
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    }
   };
 
   const [success, setSuccess] = useState("");
@@ -151,7 +91,7 @@ const Contact = () => {
                   </p>
                   <a
                     href="https://goo.gl/maps/UQP9F5NSX9Bnrgxn9"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                   >
                     Sayba Group, 3rd Floor, Star Heights, Bharat Cinema, Near
                     Railway Station, Kurla- West, Kurla, Maharashtra, India
@@ -162,16 +102,14 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-6" ref={rightRef}>
-            <form
-              className="bg-white shadow p-3 mt-md-0 mt-5"
-            >
+            <form className="bg-white shadow p-3 mt-md-0 mt-5">
               <p className=" mb-2 title primaryText fw-bold">
                 Send us a message
               </p>
               <div className="mb-2">
                 <input
                   type="text"
-                  className="myInput"
+                  className="input"
                   placeholder="Full name"
                   name="name"
                   value={details.name}
@@ -182,7 +120,7 @@ const Contact = () => {
               <div className="mb-2">
                 <input
                   type="email"
-                  className="myInput"
+                  className="input"
                   placeholder="Email address"
                   name="email"
                   value={details.email}
@@ -193,7 +131,7 @@ const Contact = () => {
               <div className="mb-2">
                 <input
                   type="number"
-                  className="myInput"
+                  className="input"
                   placeholder="Mobile number"
                   name="mobile"
                   value={details.mobile}
@@ -204,7 +142,7 @@ const Contact = () => {
               <div className="mb-2">
                 <input
                   type="text"
-                  className="myInput"
+                  className="input"
                   placeholder="Subject"
                   name="subject"
                   value={details.subject}
@@ -214,7 +152,7 @@ const Contact = () => {
               </div>
               <div className="mb-2">
                 <textarea
-                  className="myTextarea"
+                  className="textarea"
                   name="message"
                   value={details.message}
                   onChange={handleInput}
@@ -223,7 +161,7 @@ const Contact = () => {
                 <small className="text-danger">{error.message}</small>
               </div>
               <small className="text-success">{success}</small>
-              <button className={success === "" ? "myBtn" : "myBtn mt-2"} onClick={submitForm}>
+              <button className={success === "" ? "button" : "button mt-2"}>
                 Send Message
               </button>
             </form>

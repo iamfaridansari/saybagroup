@@ -1,19 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import testimonials from "../data/testimonialdata";
 
 const TestimonialCarousel = () => {
-  const [testimonial, setTestimonial] = useState([])
-  const fetchTestimonial = async () => {
-    const res = await fetch("https://saybagroup.com/backend/api/home", {
-      method: "POST",
-    })
-    const data = await res.json()
-    console.log(data.testimonial);
-    setTestimonial(data.testimonial)
-  }
-
-  useEffect(() => {
-    fetchTestimonial()
-  }, [])
   return (
     <div
       id="testimonialCarousel"
@@ -21,23 +9,23 @@ const TestimonialCarousel = () => {
       data-bs-ride="false"
     >
       <div className="carousel-inner mb-3 text-center">
-        {testimonial.map((item, index) => {
+        {testimonials.map((item, index) => {
           return (
             <div
               className={index === 0 ? "carousel-item active" : "carousel-item"}
               key={index}
             >
               <div className="profilepic text-center">
-                <img src={`https://saybagroup.com/backend/public/img/testimonial_images/${item.photo}`} alt="image" />
+                <img src={item.img} alt="testimonial" />
               </div>
-              <p>{item.description}</p>
+              <p>{item.review}</p>
               <h3 className="fw-bold">{item.name}</h3>
             </div>
           );
         })}
       </div>
       <div className="carousel-indicators">
-        {testimonial.map((item, index) => {
+        {testimonials.map((item, index) => {
           return (
             <button
               type="button"

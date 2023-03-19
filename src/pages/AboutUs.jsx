@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import AboutComponent from "../components/AboutComponent";
-import aboutBanner from "../components/aboutBannerArray";
+import aboutBanner from "../data/aboutBannerArray";
 import img5 from "../assets/images/img5.png";
 import img6 from "../assets/images/img6.png";
 import gsap from "gsap";
@@ -157,7 +157,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="col-lg-5 col-sm-6" ref={missionRightRef}>
-              <img src={img5} className="myRadius shadow" alt="image" />
+              <img src={img5} className="rounded shadow" alt="image" />
             </div>
           </div>
         </div>
@@ -175,7 +175,11 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="col-lg-5 col-sm-6 order-sm-1" ref={visionLefttRef}>
-              <img src={img6} className="myRadius shadow landscape" alt="image" />
+              <img
+                src={img6}
+                className="rounded shadow landscape"
+                alt="image"
+              />
             </div>
           </div>
         </div>

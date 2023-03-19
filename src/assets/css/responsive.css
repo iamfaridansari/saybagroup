@@ -23,7 +23,7 @@
     background: var(--secondary);
   }
   .navlinks.active {
-    height: 211px;
+    height: 165px;
     border-bottom: 1px solid var(--primary);
   }
   .navlinks li {

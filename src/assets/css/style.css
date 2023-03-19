@@ -1,6 +1,3 @@
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-
 @font-face {
   font-family: "Nunito";
   src: url(../font/Nunito.ttf);
@@ -87,10 +84,7 @@ a {
 a:hover {
   color: unset;
 }
-.myRadius {
-  border-radius: 5px;
-}
-.myBtn {
+.button {
   text-transform: uppercase;
   background: var(--primary);
   border: none;
@@ -102,7 +96,7 @@ a:hover {
   background-image: var(--bs-gradient) !important;
   transition: var(--transition);
 }
-.myBtn:hover {
+.button:hover {
   font-weight: bold;
   color: #000;
 }
@@ -113,10 +107,11 @@ a:hover {
 }
 .navlinks li {
   margin: 0 10px;
-  border-bottom: 2px solid transparent;
 }
 .navlinks li a {
   text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
 }
 .navlinks li a:hover {
   border-bottom: 2px solid var(--primary);
@@ -166,36 +161,6 @@ nav {
   transition: var(--transition);
   background: var(--secondary);
   box-shadow: 0px 0px 10px 0px #00000090;
-}
-.subscribeForm {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.subscribeForm input {
-  border: 1px solid #ddd;
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  padding: 5px;
-  outline: none;
-  background: #fff;
-  color: #000;
-  transition: var(--transition);
-  background-image: var(--bs-gradient) !important;
-}
-.subscribeForm input:focus {
-  border: 1px solid var(--primary);
-}
-.subscribeForm button {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 5px;
-  border: 1px solid var(--primary);
-  outline: none;
-  background: var(--primary);
-  color: #fff;
-  background-image: var(--bs-gradient) !important;
 }
 .carousel-item {
   width: 100%;
@@ -302,7 +267,7 @@ nav {
 .icon {
   font-size: 25px;
 }
-.myInput {
+.input {
   border: 1px solid var(--primary);
   width: 100%;
   padding: 5px;
@@ -312,7 +277,7 @@ nav {
   transition: var(--transition);
   background-image: var(--bs-gradient) !important;
 }
-.myTextarea {
+.textarea {
   border: 1px solid var(--primary);
   width: 100%;
   padding: 5px;
@@ -324,8 +289,8 @@ nav {
   transition: var(--transition);
   background-image: var(--bs-gradient) !important;
 }
-.myInput:focus,
-.myTextarea:focus {
+.input:focus,
+.textarea:focus {
   background: var(--primary);
   color: #fff;
 }
@@ -347,123 +312,6 @@ nav {
 }
 .aboutBanner img {
   width: 150px;
-}
-
-/* carousel */
-.carousel-container {
-  width: 60%;
-  margin: 0 auto;
-  border: 5px solid red;
-}
-.carousel-slide {
-  display: flex;
-  width: 100%;
-  height: 500px;
-}
-.carouselBtn {
-  background: none;
-  border: none;
-  outline: none;
-  padding: 10px;
-}
-.projectCarouselContainer {
-  width: 100%;
-  margin: 20px auto 50px;
-  height: auto;
-}
-.projectCarouselContainer:last-child {
-  margin-bottom: 0;
-}
-.sslide {
-  transform: scale(0.8);
-  transition: var(--transition);
-  opacity: 0.5;
-}
-.sslide img {
-  width: 576px;
-  width: 100%;
-  margin: 0 auto;
-  pointer-events: none;
-}
-.activeSlide {
-  transform: scale(1.25);
-  opacity: 1;
-}
-.arrow {
-  position: absolute;
-  cursor: pointer;
-  z-index: 5;
-}
-.arrow svg {
-  color: #000;
-}
-.arrow svg:hover {
-  color: var(--primary);
-}
-.next {
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.prev {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.enquireNow {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 15;
-  background: #000000a6;
-  display: grid;
-  place-items: center;
-  transition: var(--transition);
-}
-.enquireNow.active {
-  opacity: 1;
-  pointer-events: all;
-}
-.enquireNow .container {
-  width: 768px;
-  background: var(--secondary);
-  border-radius: 10px;
-  position: relative;
-  transition: var(--transition);
-  transform: scale(1.5);
-  opacity: 0;
-}
-.enquireNow.active .container {
-  transform: scale(1);
-  opacity: 1;
-}
-.enquireNow .container img {
-  border-radius: 5px;
-  aspect-ratio: 1;
-}
-.enquireNow .closeBtn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(50%, -50%);
-  background: var(--primary);
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.enquireNowBtn {
-  position: fixed;
-  left: 10px;
-  bottom: 10px;
-  z-index: 100;
 }
 .missionContainer,
 .visionContainer {
@@ -507,24 +355,6 @@ nav {
   place-items: center;
   cursor: pointer;
 }
-.detailSection {
-  padding: 16px;
-  border-radius: 10px;
-  background: #fff;
-  border: 1px solid #eee;
-  box-shadow: 0 0;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-.detailSection:last-child {
-  margin-bottom: 0;
-  padding: 10px;
-}
-iframe {
-  width: 100%;
-  height: 400px;
-  border-radius: 5px;
-}
 .chooseCard {
   background: #fff;
   min-height: 350px;
@@ -534,13 +364,15 @@ iframe {
   cursor: default;
   transition: var(--transition);
 }
-.chooseCard p {
+.chooseCard p,
+.chooseCard h3 {
   transition: var(--transition);
 }
 .chooseCard:hover {
   background: var(--primary);
 }
-.chooseCard:hover.chooseCard p {
+.chooseCard:hover.chooseCard p,
+.chooseCard:hover.chooseCard h3 {
   color: #fff;
 }
 .chooseCard .imgDiv {
@@ -554,8 +386,4 @@ iframe {
 }
 .chooseCard .imgDiv img {
   width: 75%;
-}
-.spinner-border {
-  border: 0.25em solid var(--primary);
-  border-right-color: transparent;
 }

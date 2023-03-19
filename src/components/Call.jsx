@@ -26,7 +26,7 @@ const Call = () => {
     }
   }, [modalActive]);
   return (
-    <a href="tel:123456789" className="myBtn shadow call" ref={callRef}>
+    <a href="tel:123456789" className="button shadow call" ref={callRef}>
       <IoIosCall />
     </a>
   );
