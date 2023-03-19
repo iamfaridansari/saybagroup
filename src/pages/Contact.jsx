@@ -91,7 +91,8 @@ const Contact = () => {
                   </p>
                   <a
                     href="https://goo.gl/maps/UQP9F5NSX9Bnrgxn9"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     Sayba Group, 3rd Floor, Star Heights, Bharat Cinema, Near
                     Railway Station, Kurla- West, Kurla, Maharashtra, India
@@ -103,9 +104,7 @@ const Contact = () => {
           </div>
           <div className="col-lg-4 col-md-6" ref={rightRef}>
             <form className="bg-white shadow p-3 mt-md-0 mt-5">
-              <p className=" mb-2 title primaryText fw-bold">
-                Send us a message
-              </p>
+              <p className=" mb-2 title primaryText">Send us a message</p>
               <div className="mb-2">
                 <input
                   type="text"
@@ -161,9 +160,11 @@ const Contact = () => {
                 <small className="text-danger">{error.message}</small>
               </div>
               <small className="text-success">{success}</small>
-              <button className={success === "" ? "button" : "button mt-2"}>
-                Send Message
-              </button>
+              <div className="text-end">
+                <button className={success === "" ? "button" : "button mt-2"}>
+                  Submit
+                </button>
+              </div>
             </form>
           </div>
         </div>

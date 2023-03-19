@@ -12,6 +12,7 @@ import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import Footer from "./components/Footer";
 import Helpers from "./components/Helpers";
+import ViewProject from "./pages/ViewProject";
 
 export const myContext = createContext();
 
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/viewproject" element={<ViewProject />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 

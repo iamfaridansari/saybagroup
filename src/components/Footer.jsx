@@ -13,14 +13,14 @@ const Footer = () => {
     }
   }, [message]);
   return (
-    <div className="container-fluid p-2 shadow text-center">
+    <footer className="container-fluid p-2 shadow text-center">
       <div className="container">
-        <p>
+        <p className="text-white">
           Copyright <FaCopyright /> Sayba Properties. Developed by Farid Ansari.
           All rights reserved.
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

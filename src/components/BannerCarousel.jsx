@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useContext } from "react";
 import { myContext } from "../App";
-import img12 from "../assets/images/img12.png";
-import img9 from "../assets/images/img9.jpg";
-import img4 from "../assets/images/img14.jpg"
+import carousel1 from "../assets/images/carousel1.png";
+import carousel2 from "../assets/images/carousel2.jpg";
+import carousel3 from "../assets/images/carousel3.jpg"
 import gsap from "gsap";
 
 const BannerCarousel = () => {
@@ -49,13 +49,13 @@ const BannerCarousel = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={img4} className="d-block w-100" alt="image" />
+            <img src={carousel3} className="d-block w-100" alt="building" />
           </div>
           <div className="carousel-item">
-            <img src={img12} className="d-block w-100" alt="image" />
+            <img src={carousel1} className="d-block w-100" alt="building" />
           </div>
           <div className="carousel-item">
-            <img src={img9} className="d-block w-100" alt="image" />
+            <img src={carousel2} className="d-block w-100" alt="building" />
           </div>
         </div>
         <button

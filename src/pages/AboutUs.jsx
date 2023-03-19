@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import AboutComponent from "../components/AboutComponent";
 import aboutBanner from "../data/aboutBannerArray";
-import img5 from "../assets/images/img5.png";
-import img6 from "../assets/images/img6.png";
+import vission from "../assets/images/vission.png";
+import mission from "../assets/images/mission.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -157,7 +157,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="col-lg-5 col-sm-6" ref={missionRightRef}>
-              <img src={img5} className="rounded shadow" alt="image" />
+              <img src={vission} className="rounded shadow" alt="building" />
             </div>
           </div>
         </div>
@@ -176,9 +176,9 @@ const AboutUs = () => {
             </div>
             <div className="col-lg-5 col-sm-6 order-sm-1" ref={visionLefttRef}>
               <img
-                src={img6}
+                src={mission}
                 className="rounded shadow landscape"
-                alt="image"
+                alt="building"
               />
             </div>
           </div>

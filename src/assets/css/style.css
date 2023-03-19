@@ -89,16 +89,22 @@ a:hover {
   background: var(--primary);
   border: none;
   outline: none;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 5px;
   color: #fff;
-  letter-spacing: 2px;
   background-image: var(--bs-gradient) !important;
   transition: var(--transition);
 }
 .button:hover {
-  font-weight: bold;
   color: #000;
+}
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: var(--transition);
+  background: var(--secondary);
 }
 .navlinks {
   display: flex;
@@ -110,15 +116,12 @@ a:hover {
 }
 .navlinks li a {
   text-transform: uppercase;
-  border-bottom: 2px solid transparent;
   transition: var(--transition);
 }
 .navlinks li a:hover {
-  border-bottom: 2px solid var(--primary);
   color: var(--primary);
 }
 .navlinks li a.active {
-  border-bottom: 2px solid var(--primary);
   color: var(--primary);
 }
 .hamburger {
@@ -153,28 +156,15 @@ a:hover {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  transition: var(--transition);
-  background: var(--secondary);
-  box-shadow: 0px 0px 10px 0px #00000090;
-}
 .carousel-item {
   width: 100%;
-  max-height: 100vh;
+  max-height: calc(100vh - 65.76px);
 }
 .carousel-item img {
-  height: 100vh;
+  height: 100%;
 }
 .banner {
   position: relative;
-}
-.banner video {
-  width: 100%;
-  height: 100vh;
 }
 .banner .intro {
   width: 100%;
@@ -301,9 +291,9 @@ nav {
   border-radius: 5px;
 }
 .aboutBanner {
-  height: 100vh;
-  background: linear-gradient(#0005, #0005),
-    url(../images/building1.png) center no-repeat;
+  height: calc(100vh - 65.76px);
+  background: linear-gradient(#0000008d, #000000b1),
+    url(../images/aboutbanner.jpg) center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -386,4 +376,7 @@ nav {
 }
 .chooseCard .imgDiv img {
   width: 75%;
+}
+footer {
+  background: var(--primary);
 }

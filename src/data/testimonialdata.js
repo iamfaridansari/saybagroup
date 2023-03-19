@@ -1,4 +1,4 @@
-import profile from "../assets/images/img3.jpg";
+import profile from "../assets/images/profilepic.jpg";
 
 const testimonials = [
   {
