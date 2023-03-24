@@ -1,27 +1,21 @@
-import React, { useRef, useEffect, useContext } from "react";
-import { myContext } from "../App";
+import React, { useRef, useEffect } from "react";
 import carousel1 from "../assets/images/carousel1.png";
 import carousel2 from "../assets/images/carousel2.jpg";
-import carousel3 from "../assets/images/carousel3.jpg"
+import carousel3 from "../assets/images/carousel3.jpg";
 import gsap from "gsap";
 
 const BannerCarousel = () => {
-  const { modalActive } = useContext(myContext);
-
   const firstHead = useRef(null);
 
   useEffect(() => {
     const first = firstHead.current;
-
-    if (!modalActive) {
-      gsap.from(first, {
-        letterSpacing: "5px",
-        opacity: 0,
-        duration: 1,
-        ease: "Back.easeOut",
-      });
-    }
-  }, [modalActive]);
+    gsap.from(first, {
+      letterSpacing: "5px",
+      opacity: 0,
+      duration: 1,
+      ease: "Back.easeOut",
+    });
+  }, []);
   return (
     <section className="banner container-fluid p-0">
       <div id="bannerCarousel" className="carousel slide" data-bs-ride="false">
@@ -87,7 +81,8 @@ const BannerCarousel = () => {
       <div className="intro">
         <h1 className="mb-sm-2 mb-3" ref={firstHead}>
           Live a luxurious life <br />
-          Book your dream home with us</h1>
+          Book your dream home with us
+        </h1>
       </div>
     </section>
   );

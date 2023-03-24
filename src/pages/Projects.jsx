@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import ProjectCard from "../components/ProjectCard";
 import gsap from "gsap";
 import { projects } from "../data/projectsdata";
@@ -21,8 +21,8 @@ const Projects = () => {
   }, []);
   //
   return (
-    <section className="container py-5 px-0 mt-5 text-center">
-      <h1 className="mb-md-5 mb-2 text-uppercase" ref={headRef}>
+    <section className="container py-4 px-0 text-center">
+      <h1 className="mb-md-4 mb-2 text-uppercase" ref={headRef}>
         projects
       </h1>
 
@@ -32,15 +32,7 @@ const Projects = () => {
             return (
               <ProjectCard
                 key={index}
-                id={item.id}
-                img={item.img}
-                title={item.title}
-                price={item.price}
-                area={item.area}
-                bedroom={item.bedroom}
-                location={item.location}
-                developer={item.developer}
-                classname={item.classname}
+                item={item}
               />
             );
           })}

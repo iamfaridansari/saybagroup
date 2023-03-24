@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-import { myContext } from "../App";
 import logo from "../assets/images/logo.png";
 import { BsBuilding } from "react-icons/bs";
 import { NavLink, Link } from "react-router-dom";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { AppContext } from "../context/AppContext";
 
 const Navbar = () => {
   const { scrollToTop, linksRef, buildingRef, closeRef } =
-    useContext(myContext);
+    useContext(AppContext);
 
   const toggleNavbar = () => {
     linksRef.current.classList.toggle("active");

@@ -1,5 +1,4 @@
 import React, { useContext, useRef, useEffect } from "react";
-import { myContext } from "../App";
 import BannerCarousel from "../components/BannerCarousel";
 import ChooseCard from "../components/ChooseCard";
 import ProjectCard from "../components/ProjectCard";
@@ -10,9 +9,10 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { projects } from "../data/projectsdata";
+import { AppContext } from "../context/AppContext";
 
 const Home = () => {
-  const { scrollToTop } = useContext(myContext);
+  const { scrollToTop } = useContext(AppContext);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -118,15 +118,7 @@ const Home = () => {
                 return (
                   <ProjectCard
                     key={index}
-                    id={item.id}
-                    img={item.img}
-                    title={item.title}
-                    price={item.price}
-                    area={item.area}
-                    bedroom={item.bedroom}
-                    location={item.location}
-                    developer={item.developer}
-                    classname={item.classname}
+                    item={item}
                   />
                 );
               }

@@ -57,7 +57,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="container py-5 mt-5 contactContainer">
+      <section className="container py-5 contactContainer">
         <div className="row align-items-start justify-content-between">
           <div className="col-lg-8 col-md-6" ref={leftRef}>
             <div>

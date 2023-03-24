@@ -1,4 +1,4 @@
-import React, { createContext, useRef } from "react";
+import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "./assets/css/style.css";
@@ -13,30 +13,11 @@ import Contact from "./pages/Contact.jsx";
 import Footer from "./components/Footer";
 import Helpers from "./components/Helpers";
 import ViewProject from "./pages/ViewProject";
-
-export const myContext = createContext();
+import { AppContextProvider } from "./context/AppContext";
 
 const App = () => {
-  const linksRef = useRef(null);
-  const buildingRef = useRef(null);
-  const closeRef = useRef(null);
-
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-    linksRef.current.classList.remove("active");
-    buildingRef.current.classList.remove("active");
-    closeRef.current.classList.remove("active");
-  };
-
   return (
-    <myContext.Provider
-      value={{
-        scrollToTop,
-        linksRef,
-        buildingRef,
-        closeRef,
-      }}
-    >
+    <AppContextProvider>
       <Navbar />
 
       <Routes>
@@ -49,7 +30,7 @@ const App = () => {
 
       <Helpers />
       <Footer />
-    </myContext.Provider>
+    </AppContextProvider>
   );
 };
 

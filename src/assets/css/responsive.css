@@ -1,5 +1,3 @@
-@media screen and (max-width: 1440px) {
-}
 @media screen and (max-width: 992px) {
   .blogsCarousel .blog .height img {
     width: 250px;
@@ -33,7 +31,7 @@
     font-size: 1.25rem;
   }
   .cardContainer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 200px;
   }
   .chooseCard {
@@ -48,28 +46,17 @@
   .projectCard .height {
     min-height: auto;
   }
-  .enquireNow .container {
-    width: 90%;
-  }
   .call,
   .scrollToTop {
     font-size: 1.5rem;
     width: 40px;
     height: 40px;
   }
-  .enquireNow img {
-    aspect-ratio: 0.8;
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
-}
-@media screen and (max-width: 767px) {
-  .enquireNow .container img {
-    aspect-ratio: unset;
-  }
-  .chooseCard {
-    min-height: auto;
-  }
-  h1 {
-    font-size: 1.5rem;
+  .configurations {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 576px) {
@@ -91,14 +78,27 @@
   .banner .intro {
     top: 30%;
   }
-  .enquireNowBtn {
-    font-size: 0.8rem;
-    padding: 10px;
-  }
 }
 @media screen and (max-width: 420px) {
+  .myCard p,
+  .myCard svg {
+    font-size: 12px;
+  }
+  .configurations {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 380px) {
   .cardContainer {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+  }
+  .myCard.long {
+    grid-row: span 1;
+  }
+  .myCard p,
+  .myCard svg {
+    font-size: 16px;
   }
 }
 
