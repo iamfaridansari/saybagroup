@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/saybagroup/static/css/main.2d9a5602.css",
+    "main.js": "/saybagroup/static/js/main.544a85c1.js",
+    "static/media/aboutbanner.jpg": "/saybagroup/static/media/aboutbanner.710163f661ab993cfd3d.jpg",
+    "static/media/carousel3.jpg": "/saybagroup/static/media/carousel3.6cf17416d2a4820a3242.jpg",
+    "static/media/project1.jpg": "/saybagroup/static/media/project1.5fe424cd5b162be38237.jpg",
+    "static/media/Playfair display.ttf": "/saybagroup/static/media/Playfair display.27705d9c43e8c36b1abd.ttf",
+    "static/media/Nunito.ttf": "/saybagroup/static/media/Nunito.99a3b019e7727ac19479.ttf",
+    "static/media/vission.png": "/saybagroup/static/media/vission.d91a1011130914717854.png",
+    "static/media/mission.png": "/saybagroup/static/media/mission.79530b340d8fce4dd36b.png",
+    "static/media/carousel2.jpg": "/saybagroup/static/media/carousel2.8beac32bc70ab8c4a505.jpg",
+    "static/media/carousel1.png": "/saybagroup/static/media/carousel1.b037411540d46a978f1e.png",
+    "static/media/profilepic.jpg": "/saybagroup/static/media/profilepic.ee29e677cfef3bc04a22.jpg",
+    "index.html": "/saybagroup/index.html",
+    "main.2d9a5602.css.map": "/saybagroup/static/css/main.2d9a5602.css.map",
+    "main.544a85c1.js.map": "/saybagroup/static/js/main.544a85c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d9a5602.css",
+    "static/js/main.544a85c1.js"
+  ]
+}
