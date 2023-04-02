@@ -27,14 +27,14 @@ const Contact = () => {
     email: "",
     mobile: "",
     subject: "",
-    message: "",
+    query: "",
   });
   const [error, setError] = useState({
     name: "",
     email: "",
     mobile: "",
     subject: "",
-    message: "",
+    query: "",
   });
 
   const handleInput = (e) => {
@@ -46,6 +46,71 @@ const Contact = () => {
   };
 
   const [success, setSuccess] = useState("");
+
+  const submitquery = async (e) => {
+    e.preventDefault();
+    const { name, email, mobile, subject, query } = details;
+
+    if (!details.name) {
+      setError({
+        name: "Enter your first name",
+      });
+    } else if (!details.email) {
+      setError({
+        email: "Enter your email address",
+      });
+    } else if (!details.mobile) {
+      setError({
+        mobile: "Enter your mobile number",
+      });
+    } else if (!details.subject) {
+      setError({
+        subject: "Enter the subject",
+      });
+    } else if (!details.query) {
+      setError({
+        query: "Explain your query",
+      });
+    } else {
+      try {
+        const res = await fetch("/saybamessage", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            mobile,
+            subject,
+            query,
+          }),
+        });
+        const data = await res.json();
+        console.log(data);
+        //
+        if (res.status === 200) {
+          setSuccess(data.message);
+          setError({
+            name: "",
+            email: "",
+            mobile: "",
+            subject: "",
+            query: "",
+          });
+          setDetails({
+            name: "",
+            email: "",
+            mobile: "",
+            subject: "",
+            query: "",
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -152,16 +217,19 @@ const Contact = () => {
               <div className="mb-2">
                 <textarea
                   className="textarea"
-                  name="message"
-                  value={details.message}
+                  name="query"
+                  value={details.query}
                   onChange={handleInput}
                   placeholder="Tell us more about your queries"
                 ></textarea>
-                <small className="text-danger">{error.message}</small>
+                <small className="text-danger">{error.query}</small>
               </div>
               <small className="text-success">{success}</small>
               <div className="text-end">
-                <button className={success === "" ? "button" : "button mt-2"}>
+                <button
+                  className={success === "" ? "button" : "button mt-2"}
+                  onClick={submitquery}
+                >
                   Submit
                 </button>
               </div>
