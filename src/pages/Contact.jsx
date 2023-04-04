@@ -73,7 +73,7 @@ const Contact = () => {
       });
     } else {
       try {
-        const res = await fetch("/saybamessage", {
+        const res = await fetch("/api/post/sayba/form", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
