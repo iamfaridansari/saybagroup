@@ -15,6 +15,7 @@ const AppContextProvider = ({ children }) => {
   //
   const [propertyDetails, setPropertyDetails] = useState({});
   //
+  const backendAPI = "https://server-application.onrender.com";
   return (
     <AppContext.Provider
       value={{
@@ -24,6 +25,7 @@ const AppContextProvider = ({ children }) => {
         linksRef,
         buildingRef,
         closeRef,
+        backendAPI,
       }}
     >
       {children}

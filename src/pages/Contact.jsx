@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
+import { AppContext } from "../context/AppContext";
 import gsap from "gsap";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
+  const { backendAPI } = useContext(AppContext);
   const leftRef = useRef(null);
   const rightRef = useRef(null);
 
@@ -73,7 +75,7 @@ const Contact = () => {
       });
     } else {
       try {
-        const res = await fetch("/api/post/sayba/form", {
+        const res = await fetch(backendAPI + "/api/post/sayba/form", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
