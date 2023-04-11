@@ -1,14 +1,35 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
+import { AppContext } from "../context/AppContext";
 import gsap from "gsap";
-import { projects } from "../data/projectsdata";
+import Loading from "../components/Loading";
 
 const Projects = () => {
+  const { backendAPI } = useContext(AppContext);
   //
   const projectRef = useRef(null);
   const headRef = useRef(null);
   //
+  const [properties, setProperties] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const fetchProperties = async () => {
+    try {
+      setLoading(true);
+      const res = await fetch(backendAPI + "/api/get/sayba/property");
+      const data = await res.json();
+      console.log(data);
+      if (res.status === 200) {
+        setProperties(data);
+        setLoading(false);
+      }
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
+  };
   useEffect(() => {
+    fetchProperties();
+    //
     const project = projectRef.current;
     const head = headRef.current;
     gsap.from(project, { y: "100px", duration: 1, ease: "Back.easeOut" });
@@ -25,19 +46,15 @@ const Projects = () => {
       <h1 className="mb-md-4 mb-2 text-uppercase" ref={headRef}>
         projects
       </h1>
-
-      <div className="container">
+      {loading ? (
+        <Loading content="projects" />
+      ) : (
         <div className="cardContainer" ref={projectRef}>
-          {projects.map((item, index) => {
-            return (
-              <ProjectCard
-                key={index}
-                item={item}
-              />
-            );
+          {properties.map((item, index) => {
+            return <ProjectCard key={index} item={item} />;
           })}
         </div>
-      </div>
+      )}
     </section>
   );
 };

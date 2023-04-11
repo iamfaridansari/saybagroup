@@ -1,32 +1,24 @@
 import React, { useContext } from "react";
-import { AppContext } from "../context/AppContext";
 import { FaBed, FaChartArea } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
 const ProjectCard = ({ item }) => {
-  const { setPropertyDetails, scrollToTop } = useContext(AppContext);
-  const setProperty = () => {
-    setPropertyDetails(item);
-    scrollToTop();
-  };
+  const { backendAPI } = useContext(AppContext);
   return (
-    <Link
-      to="/viewproject"
-      className={"myCard shadow " + item.classname}
-      onClick={setProperty}
-    >
-      <img src={item.img} alt="building" />
+    <Link to={`/viewproject/${item._id}`} className="myCard shadow">
+      <img src={backendAPI + "/" + item.images[0].path} alt="building" />
       <div className="content1">
-        <p>{item.title}</p>
-        <p>{item.location}</p>
+        <p>{item.name}</p>
+        <p>{item.city}</p>
       </div>
       <div className="content2">
         <p>
           <FaBed className="me-2" />
-          {item.configuration.map((item2, index2) => {
+          {item.config.map((item2, index2) => {
             return (
               <span key={index2}>
-                {item2} {index2 !== item.configuration.length - 1 ? "," : ""}
+                {item2.config} {index2 !== item.config.length - 1 ? "," : ""}
               </span>
             );
           })}
@@ -37,7 +29,7 @@ const ProjectCard = ({ item }) => {
           {item.area.map((item2, index2) => {
             return (
               <span key={index2}>
-                {item2} {index2 !== item.area.length - 1 ? "," : ""}
+                {item2.area} {index2 !== item.area.length - 1 ? "," : ""}
               </span>
             );
           })}

@@ -1,19 +1,12 @@
-import React, { useContext, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import BannerCarousel from "../components/BannerCarousel";
 import ChooseCard from "../components/ChooseCard";
-import ProjectCard from "../components/ProjectCard";
 import chooseCard from "../data/chooseCardArray";
 import TestimonialCarousel from "../components/TestimonialCarousel";
-import { Link } from "react-router-dom";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { projects } from "../data/projectsdata";
-import { AppContext } from "../context/AppContext";
 
 const Home = () => {
-  const { scrollToTop } = useContext(AppContext);
-
   gsap.registerPlugin(ScrollTrigger);
 
   const chooseHeadRef = useRef(null);
@@ -106,32 +99,6 @@ const Home = () => {
           the bonds of work and motivation.
         </p>
       </div>
-
-      <section className="container py-5">
-        <h2 className="text-uppercase text-center" ref={projectHeadRef}>
-          our projects
-        </h2>
-        <div className="mt-3 mb-4 cardContainer" ref={projectCardRef}>
-          {projects
-            .map((item, index) => {
-              if (item.classname === "short") {
-                return (
-                  <ProjectCard
-                    key={index}
-                    item={item}
-                  />
-                );
-              }
-            })
-            .slice(0, 6)}
-        </div>
-        <div className="text-center">
-          <Link to="/projects" className="button shadow" onClick={scrollToTop}>
-            View All
-            <AiOutlineArrowRight className="ms-2" />
-          </Link>
-        </div>
-      </section>
 
       <section className="container py-5">
         <div className="intro text-center">
