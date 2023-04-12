@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/saybagroup/static/css/main.7cb7621c.css",
-    "main.js": "/saybagroup/static/js/main.419f2162.js",
+    "main.js": "/saybagroup/static/js/main.d8f457c4.js",
     "static/media/aboutbanner.jpg": "/saybagroup/static/media/aboutbanner.710163f661ab993cfd3d.jpg",
     "static/media/carousel3.jpg": "/saybagroup/static/media/carousel3.6cf17416d2a4820a3242.jpg",
     "static/media/Playfair display.ttf": "/saybagroup/static/media/Playfair display.27705d9c43e8c36b1abd.ttf",
@@ -13,10 +13,10 @@
     "static/media/profilepic.jpg": "/saybagroup/static/media/profilepic.ee29e677cfef3bc04a22.jpg",
     "index.html": "/saybagroup/index.html",
     "main.7cb7621c.css.map": "/saybagroup/static/css/main.7cb7621c.css.map",
-    "main.419f2162.js.map": "/saybagroup/static/js/main.419f2162.js.map"
+    "main.d8f457c4.js.map": "/saybagroup/static/js/main.d8f457c4.js.map"
   },
   "entrypoints": [
     "static/css/main.7cb7621c.css",
-    "static/js/main.419f2162.js"
+    "static/js/main.d8f457c4.js"
   ]
 }
