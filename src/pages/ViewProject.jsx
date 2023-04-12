@@ -1,9 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import { FaBed, FaChartArea, FaCheck, FaRupeeSign } from "react-icons/fa";
+import {
+  FaBed,
+  FaChartArea,
+  FaCheck,
+  FaKey,
+  FaRupeeSign,
+} from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { AppContext } from "../context/AppContext";
 import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
+import { months } from "../data/date";
 
 const ViewProject = () => {
   const { backendAPI } = useContext(AppContext);
@@ -11,11 +18,12 @@ const ViewProject = () => {
   const [loading, setLoading] = useState(false);
   const [detail, setDetail] = useState({
     name: "",
-    developer: "",
     city: "",
-    state: "",
+    location: "",
+    address: "",
     possession: "",
     price: "",
+    desc: "",
     amenities: [],
     area: [],
     config: [],
@@ -39,6 +47,20 @@ const ViewProject = () => {
   useEffect(() => {
     viewProperty();
   }, []);
+  //
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
+  useEffect(() => {
+    setTimeout(() => {
+      const getMonth = detail.possession.split("-");
+      setYear(getMonth[0]);
+      months.map((item, index) => {
+        if (parseInt(getMonth[1]) === index + 1) {
+          setMonth(item);
+        }
+      });
+    }, 1000);
+  }, [detail.possession]);
   return (
     <div className="container py-4">
       {loading ? (
@@ -47,9 +69,7 @@ const ViewProject = () => {
         <>
           <div className="mb-4">
             <h1>{detail.name}</h1>
-            <p>
-              By - <span className="fw-bold">{detail.developer}</span>
-            </p>
+            <p>{detail.address}</p>
           </div>
           <div className="detailgrid mb-4">
             {detail.images.map((item, index) => {
@@ -60,6 +80,7 @@ const ViewProject = () => {
               );
             })}
           </div>
+          <p className="mb-4">{detail.desc}</p>
           <div className="configurations">
             <div>
               <p className="fw-bold">Configuration</p>
@@ -81,7 +102,7 @@ const ViewProject = () => {
               <p className="fw-bold">Location</p>
               <p>
                 <MdLocationOn />
-                {detail.city}, {detail.state}
+                {detail.location}, {detail.city}
               </p>
             </div>
             <div>
@@ -105,6 +126,13 @@ const ViewProject = () => {
               <p>
                 {" "}
                 <FaRupeeSign /> {detail.price} onwards
+              </p>
+            </div>
+            <div>
+              <p className="fw-bold">Possession</p>
+              <p>
+                {" "}
+                <FaKey /> {month}, {year}
               </p>
             </div>
           </div>
