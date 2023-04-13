@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/saybagroup/static/css/main.7cb7621c.css",
+    "main.css": "/saybagroup/static/css/main.450e302d.css",
     "main.js": "/saybagroup/static/js/main.d8f457c4.js",
     "static/media/aboutbanner.jpg": "/saybagroup/static/media/aboutbanner.710163f661ab993cfd3d.jpg",
     "static/media/carousel3.jpg": "/saybagroup/static/media/carousel3.6cf17416d2a4820a3242.jpg",
@@ -12,11 +12,11 @@
     "static/media/carousel1.png": "/saybagroup/static/media/carousel1.b037411540d46a978f1e.png",
     "static/media/profilepic.jpg": "/saybagroup/static/media/profilepic.ee29e677cfef3bc04a22.jpg",
     "index.html": "/saybagroup/index.html",
-    "main.7cb7621c.css.map": "/saybagroup/static/css/main.7cb7621c.css.map",
+    "main.450e302d.css.map": "/saybagroup/static/css/main.450e302d.css.map",
     "main.d8f457c4.js.map": "/saybagroup/static/js/main.d8f457c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cb7621c.css",
+    "static/css/main.450e302d.css",
     "static/js/main.d8f457c4.js"
   ]
 }
